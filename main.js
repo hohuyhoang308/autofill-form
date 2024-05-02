@@ -4,7 +4,7 @@
 // @version      1
 // @description  tự động đánh giá khảo sát
 // @include      office.com
-// @match        https://forms.office.com/Pages/*
+// @match        https://forms.office.com/*
 // @require      https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js
 // @grant        GM_xmlhttpRequest
 // @grant        GM.xmlHttpRequest
@@ -53,7 +53,7 @@ document.addEventListener("keydown", function(event) {
 
           // Kích hoạt sự kiện click vào nút Submit
           submitButton.click();
-        }, 20000000);
+        }, 4000);
       }
     }, 100);
   }
