@@ -1,7 +1,8 @@
 // ==UserScript==
-// @name         Hồ Huy Hoàng
+// @name         autofill
+//@author        Hồ Huy Hoàng
 // @namespace    carl.3h
-// @version      1
+// @version      1.4
 // @description  tự động đánh giá khảo sát
 // @include      office.com
 // @match        https://forms.office.com/*
@@ -23,7 +24,7 @@ const inputElement = document.querySelector('input[aria-label="Single line text"
 if (inputElement) {
   inputElement.value = "Hài lòng";
 } else {
-  console.log("Không Tìm Thấy TextBox");
+  console.log("Không Tìm Thấy Text Box");
 }
 // Lấy tất cả các phần tử input radio
 const radioInputs = document.querySelectorAll('input[role="radio"]');
