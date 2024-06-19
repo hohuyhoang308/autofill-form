@@ -17,20 +17,24 @@
 (function() {
     'use strict';
 document.addEventListener("keydown", function(event) {
-  if (event.key === "c") {
+  if (event.key === "`") {
     // Lấy phần tử input
-    const inputElement = document.querySelector('input[aria-label="Single line text"]');
-    // Thiết lập giá trị "Hài lòng" cho phần tử input
-    inputElement.value = "Hài lòng";
+const inputElement = document.querySelector('input[aria-label="Single line text"]');
+if (inputElement) {
+  inputElement.value = "Hài lòng";
+} else {
+  console.log("Không Tìm Thấy TextBox");
+}
+// Lấy tất cả các phần tử input radio
+const radioInputs = document.querySelectorAll('input[role="radio"]');
 
-    // Lấy tất cả các phần tử input radio
-    const radioInputs = document.querySelectorAll('input[type="radio"]');
-
-    // Lọc các phần tử input radio có chuỗi "Rất hài lòng" trong aria-label
-    const filteredRadioInputs = Array.from(radioInputs).filter((radioInput) => {
-      const ariaLabel = radioInput.getAttribute('aria-label');
-      return ariaLabel.includes("Rất hài lòng");
-    });
+//Chọn Mục Muốn Đánh Giá
+const radioAim = "5";
+      // Lọc các phần tử input radio có chuỗi "includes("")" trong aria-label
+const filteredRadioInputs = Array.from(radioInputs).filter((radioInput) => {
+  const ariaLabel = radioInput.getAttribute('aria-label');
+  return ariaLabel.includes(radioAim);
+});
 
     // Số lần click
     let clickCount = 0;
@@ -41,6 +45,7 @@ document.addEventListener("keydown", function(event) {
       if (clickCount < filteredRadioInputs.length) {
         // Click vào radio button tiếp theo
         filteredRadioInputs[clickCount].click();
+          console.log("Đã Click Đánh Giá",radioAim , "ID :" ,clickCount);
         clickCount++;
       } else {
         // Dừng interval nếu đã click hết tất cả các radio button
@@ -53,9 +58,9 @@ document.addEventListener("keydown", function(event) {
 
           // Kích hoạt sự kiện click vào nút Submit
           submitButton.click();
-        }, 4000);
+        }, 20000000000000);
       }
-    }, 100);
+    }, 25);
   }
 });
 })();
