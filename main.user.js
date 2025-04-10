@@ -22,10 +22,10 @@
     // ===== CÁC BIẾN CÓ THỂ TÙY CHỈNH =====
     // Danh sách mã môn học
     const MON_HOC_VALUES = [
-      "22425_192",
-      "22425_043C",
-      "22425_040C",
-      "22425_006C"
+      "Mã Môn 1",
+      "Mã Môn 2",
+      "Mã Môn 3",
+      "Mã Môn 4"
     ];
 
     // Các lựa chọn dành cho form
@@ -33,7 +33,7 @@
       NGANH: "Công nghệ Thông tin",        // Ngành học mặc định là công nghệ thông tin
       TY_LE_THAM_GIA: ">90 %",              // Tỷ lệ tham gia lớp học
       DANH_GIA: "Rất hài lòng",            // Đánh giá chọn tự động
-      TEXT_BOX: "Hài lòng"                  // Nội dung điền vào ô text cuối cùng
+      TEXT_BOX: "Hài lòng"                  // Nội dung điền vào ô text
     };
 
     // Thời gian chờ (milliseconds)
@@ -56,7 +56,6 @@
 
     document.addEventListener("keydown", function(event) {
       if (event.key === "`") {
-
         currentValueIndex = 0;
         currentOptionForSameCode = 0;
         matchingOptions = [];
@@ -102,39 +101,31 @@
               console.log("Đang click nút Submit");
               submitButton.click();
 
-
               completedVariantCount++;
-
 
               let moveToNextCode = false;
 
-
               if (matchingOptions.length > 0 && currentOptionForSameCode < matchingOptions.length - 1) {
-
                 currentOptionForSameCode++;
                 console.log(`Chuyển sang tùy chọn tiếp theo (${currentOptionForSameCode + 1}/${matchingOptions.length}) cho mã ${MON_HOC_VALUES[currentValueIndex]}`);
               } else {
-
                 const currentCode = MON_HOC_VALUES[currentValueIndex];
                 processedCourses.add(currentCode);
                 console.log(`Đã hoàn thành tất cả biến thể của mã: ${currentCode}`);
                 console.log(`Đã xử lý ${processedCourses.size}/${MON_HOC_VALUES.length} mã môn học`);
-
 
                 currentValueIndex = (currentValueIndex + 1) % MON_HOC_VALUES.length;
                 currentOptionForSameCode = 0;
                 matchingOptions = [];
                 moveToNextCode = true;
 
-
-if (processedCourses.size >= MON_HOC_VALUES.length) {
-    allProcessed = true;
-    console.log("============================================");
-    console.log(`ĐÃ HOÀN THÀNH TẤT CẢ ${MON_HOC_VALUES.length} MÃ MÔN HỌC!`);
-    console.log(`Tổng số biến thể đã xử lý: ${completedVariantCount}`);
-    console.log("============================================");
-}
-
+                if (processedCourses.size >= MON_HOC_VALUES.length) {
+                  allProcessed = true;
+                  console.log("============================================");
+                  console.log(`ĐÃ HOÀN THÀNH TẤT CẢ ${MON_HOC_VALUES.length} MÃ MÔN HỌC!`);
+                  console.log(`Tổng số biến thể đã xử lý: ${completedVariantCount}`);
+                  console.log("============================================");
+                }
               }
 
               setTimeout(function() {
@@ -143,10 +134,8 @@ if (processedCourses.size >= MON_HOC_VALUES.length) {
                   console.log("Đang click nút Submit another response");
                   submitAnotherButton.click();
 
-
                   setTimeout(function() {
                     if (moveToNextCode && processedCourses.has(MON_HOC_VALUES[currentValueIndex])) {
-
                       let foundUnprocessed = false;
                       const startIndex = currentValueIndex;
 
@@ -197,7 +186,7 @@ if (processedCourses.size >= MON_HOC_VALUES.length) {
         console.log(`Không tìm thấy nút radio ${LUA_CHON.NGANH}`);
       }
 
-      clickElement('button[aria-label="Next"]', "Next button", function() {
+      clickElement('button[aria-label="Next"], button[aria-label="Tiếp theo"], button[data-automation-id="nextButton"]', "Next/Tiếp theo button", function() {
         setTimeout(function() {
           var listbox = document.querySelector('div[role="button"][aria-haspopup="listbox"]');
           if (listbox) {
@@ -205,7 +194,6 @@ if (processedCourses.size >= MON_HOC_VALUES.length) {
             listbox.click();
             setTimeout(function() {
               var listBoxOptions = document.querySelectorAll('span.text-format-content');
-
 
               matchingOptions = [];
               for (var i = 0; i < listBoxOptions.length; i++) {
@@ -217,19 +205,15 @@ if (processedCourses.size >= MON_HOC_VALUES.length) {
               console.log(`Tìm thấy ${matchingOptions.length} tùy chọn cho mã ${MON_HOC_VALUES[currentValueIndex]}`);
 
               if (matchingOptions.length > 0) {
-
                 console.log(`Đã chọn: ${matchingOptions[currentOptionForSameCode].textContent}`);
                 matchingOptions[currentOptionForSameCode].click();
               } else {
                 console.log(`Không tìm thấy tùy chọn với giá trị: ${MON_HOC_VALUES[currentValueIndex]}`);
 
-
                 processedCourses.add(MON_HOC_VALUES[currentValueIndex]);
-
 
                 currentValueIndex = (currentValueIndex + 1) % MON_HOC_VALUES.length;
                 currentOptionForSameCode = 0;
-
 
                 if (processedCourses.size >= MON_HOC_VALUES.length) {
                   allProcessed = true;
@@ -237,9 +221,7 @@ if (processedCourses.size >= MON_HOC_VALUES.length) {
                   return;
                 }
 
-
                 if (processedCourses.has(MON_HOC_VALUES[currentValueIndex])) {
-
                   let foundUnprocessed = false;
                   const startIndex = currentValueIndex;
 
@@ -258,7 +240,6 @@ if (processedCourses.size >= MON_HOC_VALUES.length) {
                   }
                 }
 
-
                 setTimeout(loopThroughValues, DELAY.LOAD_ELEMENTS);
                 return;
               }
@@ -271,7 +252,7 @@ if (processedCourses.size >= MON_HOC_VALUES.length) {
                 } else {
                   console.log(`Không tìm thấy nút radio ${LUA_CHON.TY_LE_THAM_GIA}`);
                 }
-                clickElement('button[aria-label="Next"]', "Next button", function() {
+                clickElement('button[aria-label="Next"], button[aria-label="Tiếp theo"], button[data-automation-id="nextButton"]', "Next/Tiếp theo button", function() {
                   setTimeout(function() {
                     selectAllRatHaiLongAndSubmit();
                   }, DELAY.LOAD_ELEMENTS);
@@ -286,10 +267,10 @@ if (processedCourses.size >= MON_HOC_VALUES.length) {
     }
 
     function clickElement(selector, elementName, callback) {
-      const element = document.querySelector(selector);
-      if (element) {
-        console.log(`Tìm thấy ${elementName}`);
-        element.click();
+      const elements = document.querySelectorAll(selector);
+      if (elements.length > 0) {
+        console.log(`Tìm thấy ${elementName}: ${elements.length} phần tử`);
+        elements[0].click(); // Click vào phần tử đầu tiên tìm thấy
         if (callback) callback();
       } else {
         console.log(`Không tìm thấy ${elementName}`);
