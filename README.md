@@ -3,7 +3,7 @@
 Script Tampermonkey này tự động điền các biểu mẫu trên [Microsoft Forms](https://forms.office.com/) với đánh giá "Rất hài lòng".
 
 ## 📌 Tính năng
-- Tự động chọn **"Công nghệ Thông tin"** làm ngành học.
+- Tự động chọn **"Các Khảo Sát"** một cách tự động.
 - Điền các trường biểu mẫu theo thiết lập sẵn.
 - Chọn tất cả đánh giá **"Rất hài lòng"**.
 - Gửi biểu mẫu và có thể tiếp tục phản hồi tiếp theo.
