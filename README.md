@@ -13,7 +13,7 @@ Script Tampermonkey này tự động điền các biểu mẫu trên [Microsoft
 
 ## 🔧 Cài đặt
 1. Cài đặt tiện ích [Tampermonkey](https://www.tampermonkey.net/) trên trình duyệt của bạn.
-2. Nhấp vào nút bên dưới để cài đặt script:
+2. Nhấp vào nút cài đặt này để cài đặt script 👉 :
    [![Cài đặt Script](https://img.shields.io/badge/Cài%20đặt-Script-blue.svg)](https://raw.githubusercontent.com/hohuyhoang308/autofill-form/refs/heads/main/main.user.js)
 
 ## 🚀 Cách sử dụng
