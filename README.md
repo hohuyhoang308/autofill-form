@@ -9,7 +9,7 @@ Script **Tampermonkey** giúp tự động điền các biểu mẫu trên [Micr
 - Chọn tất cả đánh giá **"Rất hài lòng"**
 - Gửi biểu mẫu và có thể tiếp tục phản hồi tiếp theo
 - Phím tắt:
-  - Nhấn phím **\`** để bắt đầu quy trình tự động hóa đầy đủ
+  - Nhấn phím **`** để bắt đầu quy trình tự động hóa đầy đủ
   - Nhấn phím **1** để chỉ chọn tất cả tùy chọn **"Rất hài lòng"** và gửi
 
 ## 🔧 Cài đặt
@@ -22,7 +22,7 @@ Script **Tampermonkey** giúp tự động điền các biểu mẫu trên [Micr
 ## 🚀 Cách sử dụng
 
 1. Truy cập trang [Microsoft Forms](https://forms.office.com/).
-2. Nhấn phím **\`** để bắt đầu quy trình tự động hoàn toàn.
+2. Nhấn phím **`** để bắt đầu quy trình tự động hoàn toàn.
 3. Hoặc nhấn phím **1** để chỉ chọn tất cả đánh giá **"Rất hài lòng"** và gửi.
 
 ## 👨‍💻 Tác giả
