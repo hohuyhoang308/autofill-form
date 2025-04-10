@@ -33,7 +33,7 @@
       NGANH: "Công nghệ Thông tin",        // Ngành học mặc định là công nghệ thông tin
       TY_LE_THAM_GIA: ">90 %",              // Tỷ lệ tham gia lớp học
       DANH_GIA: "Rất hài lòng",            // Đánh giá chọn tự động
-      TEXT_BOX: "Hài lòng"                  // Nội dung điền vào ô text
+      TEXT_BOX: "Hài lòng"                  // Nội dung điền vào ô text cuối cùng
     };
 
     // Thời gian chờ (milliseconds)
