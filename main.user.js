@@ -3,7 +3,7 @@
 // @author       Hồ Huy Hoàng
 // @namespace    hohuyhoang308
 // @version      1.26
-// @description  tự động đánh giá khảo sát với menu chỉnh sửa.
+// @description  tự động đánh giá khảo sát với menu chỉnh sửa, hỗ trợ radio button và listbox
 // @include      office.com
 // @match        https://forms.office.com/*
 // @require      https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js
@@ -300,6 +300,7 @@
         }
     }
 
+    // Tạo menu HTML với list box và nút chạy
     function createConfigMenu() {
         const menuStyle = `
             #configMenu {
