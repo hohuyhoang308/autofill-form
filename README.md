@@ -20,7 +20,6 @@ Script Tampermonkey này được thiết kế để tự động điền các b
 3. Chỉnh sửa các cấu hình trong **Menu**
 4. Ấn vào lưu cấu hình
 5. Bấm vào bắt đầu tiến trình
-6. 
 ## 📝 Theo dõi Tiến trình
    - Script sẽ hiển thị thông báo trong console trình duyệt (F12) về tiến trình, bao gồm mã môn học đang xử lý, các tùy chọn được chọn, và trạng thái hoàn thành.
 
