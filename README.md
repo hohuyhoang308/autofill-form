@@ -1,15 +1,13 @@
 # Tự Động Điền Khảo Sát cho Microsoft Forms
 
-Script Tampermonkey này tự động điền các biểu mẫu trên [Microsoft Forms](https://forms.office.com/) với đánh giá "Rất hài lòng".
+Script Tampermonkey này được thiết kế để tự động điền các biểu mẫu khảo sát trên Microsoft Forms với các đánh giá mặc định, đặc biệt là chọn tất cả đánh giá là "Rất hài lòng". Script cung cấp giao diện cấu hình để người dùng có thể tùy chỉnh các giá trị và tự động hóa quy trình..
 
 ## 📌 Tính năng
-- Tự động chọn **"Các Khảo Sát"** một cách tự động.
-- Điền các trường biểu mẫu theo thiết lập sẵn.
-- Chọn tất cả đánh giá **"Rất hài lòng"**.
-- Gửi biểu mẫu và có thể tiếp tục phản hồi tiếp theo.
-- Phím tắt:
-  - Nhấn phím **`** để bắt đầu quy trình tự động hoàn toàn.
-  - Nhấn phím **1** để chỉ chọn tất cả tùy chọn **"Rất hài lòng"** và gửi.
+- Tự động chọn và điền các trường biểu mẫu theo thiết lập sẵn.
+- Chọn tất cả các tùy chọn đánh giá là "Rất hài lòng" hoặc các giá trị khác mà người dùng cấu hình.
+- Gửi biểu mẫu và tiếp tục xử lý các phản hồi tiếp theo nếu cần.
+- Hỗ trợ menu cấu hình để chỉnh sửa danh sách mã môn học, ngành, tỷ lệ tham gia, đánh giá, và nội dung ô text.
+- Theo dõi tiến độ và xử lý nhiều biến thể của mã môn học.
 
 ## 🔧 Cài đặt
 1. Cài đặt tiện ích [Tampermonkey](https://www.tampermonkey.net/) trên trình duyệt của bạn.
@@ -18,44 +16,25 @@ Script Tampermonkey này tự động điền các biểu mẫu trên [Microsoft
 
 ## 🚀 Cách sử dụng
 1. Truy cập trang [Microsoft Forms](https://forms.office.com/).
-2. Nhấn phím **`** để bắt đầu quy trình tự động hoàn toàn.
-3. Hoặc nhấn phím **1** để chỉ chọn tất cả đánh giá **"Rất hài lòng"** và gửi.
+2. Mở **Menu** Cấu Hình
+3. Chỉnh sửa các cấu hình trong **Menu**
+4. Ấn vào lưu cấu hình
+5. Bấm vào bắt đầu tiến trình
+6. 
+## 📝 Theo dõi Tiến trình
+   - Script sẽ hiển thị thông báo trong console trình duyệt (F12) về tiến trình, bao gồm mã môn học đang xử lý, các tùy chọn được chọn, và trạng thái hoàn thành.
 
 ## 👨‍💻 Tác giả
 - **Tác giả gốc:** Hồ Huy Hoàng
-- **Phiên bản:** 1.11
+- **Phiên bản:** 1.26
 - **Giấy phép:** MIT
 
 ---
 
-## Hướng dẫn Cấu hình
+## 📝 Ghi chú
+-- Script này chỉ hoạt động trên các trang Microsoft Forms (https://forms.office.com/*).
+-- Đảm bảo bạn có quyền truy cập và hiểu rõ các chính sách sử dụng của Microsoft Forms khi sử dụng script này.
+-- Nếu gặp lỗi, kiểm tra console trình duyệt để xem chi tiết (nhấn F12).
 
-### Các Biến Có Thể Tùy Chỉnh
-
-Bạn có thể tùy chỉnh script để phù hợp với nhu cầu của mình bằng cách thay đổi các biến sau:
-
-```javascript
-// Danh sách mã môn học
-const MON_HOC_VALUES = [
-  "Mã Môn Học 1", // Ví dụ: 22425_043C
-  "Mã Môn Học 2",
-  "Mã Môn Học 3",
-  "Mã Môn Học 4"
-];
-
-// Các lựa chọn dành cho form
-const LUA_CHON = {
-  NGANH: "Công nghệ Thông tin", // Ngành học mặc định là công nghệ thông tin
-  TY_LE_THAM_GIA: ">90 %", // Tỷ lệ tham gia lớp học
-  DANH_GIA: "Rất hài lòng", // Đánh giá chọn tự động
-  TEXT_BOX: "Hài lòng" // Nội dung điền vào ô text
-};
-
-// Thời gian chờ (milliseconds)
-const DELAY = {
-  CLICK_RADIO: 50, // Thời gian giữa các lần click radio
-  SUBMIT_FORM: 1000, // Thời gian chờ trước khi submit
-  NEXT_FORM: 2000, // Thời gian chờ trước khi bắt đầu form mới
-  LOAD_LISTBOX: 500, // Thời gian chờ để listbox load
-  LOAD_ELEMENTS: 1000 // Thời gian chờ để các phần tử load
-};
+### 🤝 Góp ý & Hỗ trợ
+Nếu bạn gặp vấn đề hoặc muốn đóng góp, vui lòng mở một issue trên repository GitHub hoặc liên hệ với tác giả. Cảm ơn bạn đã sử dụng script!
