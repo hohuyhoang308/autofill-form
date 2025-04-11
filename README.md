@@ -32,9 +32,9 @@ Script Tampermonkey này được thiết kế để tự động điền các b
 ---
 
 ## 📝 Ghi chú
-- **Script này chỉ hoạt động trên các trang Microsoft Forms (https://forms.office.com/*).
-- **Đảm bảo bạn có quyền truy cập và hiểu rõ các chính sách sử dụng của Microsoft Forms khi sử dụng script này.
-- **Nếu gặp lỗi, kiểm tra console trình duyệt để xem chi tiết (nhấn F12).
+- Script này chỉ hoạt động trên các trang Microsoft Forms (https://forms.office.com/*).
+- Đảm bảo bạn có quyền truy cập và hiểu rõ các chính sách sử dụng của Microsoft Forms khi sử dụng script này.
+- Nếu gặp lỗi, kiểm tra console trình duyệt để xem chi tiết (nhấn F12).
 
 ### 🤝 Góp ý & Hỗ trợ
 Nếu bạn gặp vấn đề hoặc muốn đóng góp, vui lòng mở một issue trên repository GitHub hoặc liên hệ với tác giả. Cảm ơn bạn đã sử dụng script!
