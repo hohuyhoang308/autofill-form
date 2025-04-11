@@ -3,7 +3,7 @@
 // @author       Hồ Huy Hoàng
 // @namespace    hohuyhoang308
 // @version      1.26
-// @description  tự động đánh giá khảo sát với menu chỉnh sửa, hỗ trợ radio button và listbox
+// @description  tự động đánh giá khảo sát với menu chỉnh sửa.
 // @include      office.com
 // @match        https://forms.office.com/*
 // @require      https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js
@@ -300,7 +300,7 @@
         }
     }
 
-    // Tạo menu HTML với list box và nút chạy
+
     function createConfigMenu() {
         const menuStyle = `
             #configMenu {
@@ -384,7 +384,7 @@
         document.head.insertAdjacentHTML('beforeend', `<style>${menuStyle}</style>`);
         document.body.insertAdjacentHTML('beforeend', menuHtml);
 
-        // Gắn sự kiện cho các nút sau khi menu được thêm vào DOM
+
         document.getElementById('saveConfig').addEventListener('click', function() {
             MON_HOC_VALUES = document.getElementById('monHocValues').value.split('\n').map(item => item.trim()).filter(item => item);
             LUA_CHON.NGANH = document.getElementById('nganh').value;
