@@ -3,7 +3,7 @@
 // @author       Hồ Huy Hoàng
 // @namespace    hohuyhoang308
 // @version      1.26
-// @description  tự động đánh giá khảo sát với menu chỉnh sửa.
+// @description  tự động đánh giá khảo sát với menu chỉnh sửa, hỗ trợ radio button và listbox
 // @include      office.com
 // @match        https://forms.office.com/*
 // @require      https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js
@@ -300,7 +300,7 @@
         }
     }
 
-
+    // Tạo menu HTML với list box và nút chạy
     function createConfigMenu() {
         const menuStyle = `
             #configMenu {
@@ -345,6 +345,22 @@
             #configMenu button:hover {
                 background: #0056b3;
             }
+
+.neon-text {
+    font-size: 1rem;
+    color: #fff;
+    text-shadow: 0 0 5px #ff005e, 0 0 10px #ff005e, 0 0 20px #ff005e, 0 0 40px #ff005e, 0 0 80px #ff005e;
+    animation: glow 1.5s infinite alternate;
+}
+
+@keyframes glow {
+    0% {
+        text-shadow: 0 0 5px #ff005e, 0 0 10px #ff005e, 0 0 20px #ff005e, 0 0 40px #ff005e, 0 0 80px #ff005e;
+    }
+    100% {
+        text-shadow: 0 0 10px #00d4ff, 0 0 20px #00d4ff, 0 0 40px #00d4ff, 0 0 80px #00d4ff, 0 0 160px #00d4ff;
+    }
+}
         `;
 
         const nganhSelect = NGANH_OPTIONS.map(option => `<option value="${option}" ${option === LUA_CHON.NGANH ? 'selected' : ''}>${option}</option>`).join('');
@@ -369,7 +385,11 @@
                     <button id="selectAndSubmit">Chọn & Submit</button>
 
                     <button id="saveConfig">Lưu cấu hình</button>
+                  <div class="neon-container">
+    <a href="https://www.facebook.com/hohuyhoang308/" target="_blank" class="neon-text">TÁC GIẢ : HỒ HUY HOÀNG</a>
+</div>
                 </div>
+
             </div>
         `;
 
@@ -384,7 +404,7 @@
         document.head.insertAdjacentHTML('beforeend', `<style>${menuStyle}</style>`);
         document.body.insertAdjacentHTML('beforeend', menuHtml);
 
-
+        // Gắn sự kiện cho các nút sau khi menu được thêm vào DOM
         document.getElementById('saveConfig').addEventListener('click', function() {
             MON_HOC_VALUES = document.getElementById('monHocValues').value.split('\n').map(item => item.trim()).filter(item => item);
             LUA_CHON.NGANH = document.getElementById('nganh').value;
