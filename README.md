@@ -1,5 +1,5 @@
 # Tự Động Điền Khảo Sát cho Microsoft Forms
-##Có bao giờ bạn tự nghĩ tại sao mình phải tốn 15 p cuộc đời vào việc khảo sát chưa, trong khi mình có thể làm nhiều việc. Chúng tôi ra mắt công cụ tiện ích giúp giải quyết vấn đề này##
+**Có bao giờ bạn tự nghĩ tại sao mình phải tốn 15 p cuộc đời vào việc khảo sát chưa, trong khi mình có thể làm nhiều việc. Chúng tôi ra mắt công cụ tiện ích giúp giải quyết vấn đề này**
 - Script Tampermonkey này được thiết kế để tự động điền các biểu mẫu khảo sát trên Microsoft Forms với các đánh giá mặc định, đặc biệt là chọn tất cả đánh giá là "Rất hài lòng". Script cung cấp giao diện cấu hình để người dùng có thể tùy chỉnh các giá trị và tự động hóa quy trình..
 
 ## 📌 Tính năng
