@@ -7,7 +7,7 @@
 > **Công cụ tự động hóa việc điền khảo sát Microsoft Forms, tiết kiệm thời gian và công sức cho sinh viên**
 
 ## 📋 Tổng quan
-
+**Có bao giờ bạn tự nghĩ tại sao mình phải tốn 15p cuộc đời vào việc khảo sát chưa, trong khi mình có thể làm nhiều việc. Chúng tôi ra mắt công cụ tiện ích giúp giải quyết vấn đề này**
 Auto-fill Form là một công cụ mạnh mẽ giúp tự động điền các biểu mẫu khảo sát trên Microsoft Forms với các đánh giá được cấu hình sẵn. Công cụ hỗ trợ cả **Chrome Extension** và **Tampermonkey Userscript**, mang lại sự linh hoạt tối đa cho người dùng.
 
 ### ✨ Tính năng chính
