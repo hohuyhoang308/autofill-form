@@ -1,0 +1,55 @@
+{
+  "manifest_version": 3,
+  "name": "Auto-fill",
+  "version": "1.27",
+  "description": "Tự động đánh giá khảo sát với menu chỉnh sửa, hỗ trợ radio button và listbox",
+  "author": "Hồ Huy Hoàng",
+  
+  "permissions": [
+    "storage",
+    "activeTab",
+    "tabs",
+    "notifications"
+  ],
+  
+  "host_permissions": [
+    "https://forms.office.com/*"
+  ],
+  
+  "action": {
+    "default_popup": "popup/popup.html",
+    "default_icon": {
+      "16": "icons/icon-16.png"
+    }
+  },
+  
+  "content_scripts": [
+    {
+      "matches": ["https://forms.office.com/*"],
+      "js": [
+        "libs/jquery-3.6.0.min.js",
+        "js/constants.js",
+        "js/storage.js",
+        "js/form-handler.js",
+        "js/content.js"
+      ],
+      "css": ["css/content.css"],
+      "run_at": "document_idle"
+    }
+  ],
+  
+  "background": {
+    "service_worker": "js/background.js"
+  },
+  
+  "icons": {
+    "16": "icons/icon-16.png"
+  },
+  
+  "web_accessible_resources": [
+    {
+      "resources": ["css/content.css"],
+      "matches": ["https://forms.office.com/*"]
+    }
+  ]
+}

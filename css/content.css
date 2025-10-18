@@ -1,0 +1,72 @@
+/* content.css - Styles cho content script */
+
+/* Reset một số styles có thể conflict */
+.autofill_improved_configMenu * {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Đảm bảo menu luôn hiển thị đúng */
+#autofill_improved_configMenu {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif !important;
+  font-size: 14px !important;
+  line-height: 1.5 !important;
+  color: #333 !important;
+}
+
+/* Animation cho arrow */
+#autofill_improved_configMenu .arrow {
+  display: inline-block;
+  transition: transform 0.3s ease;
+}
+
+#autofill_improved_configMenu .arrow.down {
+  transform: rotate(90deg);
+}
+
+/* Smooth animation cho content */
+#autofill_improved_configMenu .content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+}
+
+#autofill_improved_configMenu .content.show {
+  max-height: 800px;
+}
+
+/* Focus styles */
+#autofill_improved_configMenu input:focus,
+#autofill_improved_configMenu select:focus,
+#autofill_improved_configMenu textarea:focus {
+  outline: none;
+  border-color: #007bff;
+  box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.25);
+}
+
+/* Hover effects */
+#autofill_improved_configMenu button {
+  transition: all 0.3s ease;
+}
+
+#autofill_improved_configMenu button:active {
+  transform: translateY(1px);
+}
+
+/* Loading indicator */
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.loading-spinner {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  border: 2px solid #f3f3f3;
+  border-top: 2px solid #007bff;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin-left: 5px;
+}
