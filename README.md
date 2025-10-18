@@ -1,7 +1,6 @@
 # 🚀 Auto-fill Form - Tự động điền khảo sát Microsoft Forms
 
 [![Version](https://img.shields.io/badge/version-1.27-blue.svg)](https://github.com/hohuyhoang308/autofill-form)
-[![License](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
 [![Chrome Extension](https://img.shields.io/badge/Chrome-Extension-red.svg)](https://chrome.google.com/webstore)
 [![Tampermonkey](https://img.shields.io/badge/Tampermonkey-Script-yellow.svg)](https://www.tampermonkey.net/)
 
@@ -104,7 +103,7 @@ Auto-fill Form là một công cụ mạnh mẽ giúp tự động điền các 
 - <50%
 - 50% - 70%
 - 70% - 90%
-- >90%
+- 90%
 
 ### Mức độ đánh giá
 - Rất không hài lòng
@@ -189,13 +188,8 @@ autofill-form/
 ## 👨‍💻 Tác giả
 
 **Hồ Huy Hoàng**
-- 📧 Email: [hohuyhoang308@gmail.com](mailto:hohuyhoang308@gmail.com)
 - 🌐 Facebook: [facebook.com/hohuyhoang308](https://www.facebook.com/hohuyhoang308/)
 - 📱 GitHub: [github.com/hohuyhoang308](https://github.com/hohuyhoang308)
-
-## 📄 Giấy phép
-
-Dự án này được phân phối dưới giấy phép MIT. Xem file [LICENSE](LICENSE) để biết thêm chi tiết.
 
 ## 🤝 Đóng góp
 
