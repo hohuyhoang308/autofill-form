@@ -1,4 +1,4 @@
-# 🚀 Auto-fill Form - Tự động điền khảo sát Microsoft Forms
+# 🚀 Auto-fill Form - Tự động điền khảo sát học phần Microsoft Forms
 
 [![Version](https://img.shields.io/badge/version-1.27-blue.svg)](https://github.com/hohuyhoang308/autofill-form)
 [![Chrome Extension](https://img.shields.io/badge/Chrome-Extension-red.svg)](https://chrome.google.com/webstore)
